@@ -1,0 +1,15 @@
+.text
+main: 
+	addi $s0, $0, 1 # i 
+	addi $s1, $0, 2 # j
+	addi $s2, $0, 3 # x
+	addi $s3, $0, 4 #y
+	addi $s4, $0, 5 #z
+if:
+	slt $t0, $s0, $s1 #i < j 1: 
+	beq $t0 , $0 else 
+	addi $s2, $s2, 1
+	addi $s4, $0, 1
+else: 
+	subi  $s3, $s3 , 1
+	sll $s4, $s4, 1
